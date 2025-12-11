@@ -1,9 +1,8 @@
-
 # todo_list.py
 import datetime
 
 class Task:
-    def _init_(self, name, priority="Normal", due_date=None):
+    def __init__(self, name, priority="Normal", due_date=None):
         self.name = name
         self.status = "Pending"  # Atributo 2
         self.priority = priority # Atributo 3
@@ -12,11 +11,11 @@ class Task:
     def mark_completed(self):
         self.status = "Completed"
 
-    def _str_(self):
+    def __str__(self):
         return f"{self.name} | {self.status} | {self.priority} | {self.due_date}"
 
 class ToDoListManager:
-    def _init_(self):
+    def __init__(self):
         self.tasks = []
 
     def add_task(self, name, priority="Normal", due_date=None):
